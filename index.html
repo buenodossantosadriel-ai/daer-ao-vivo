@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>DAER AO VIVO</title>
+<style>
+body{background:#000;color:#fff;font-family:Arial,sans-serif;margin:0;padding:0;text-align:center}
+.header{background:#0a0a0a;padding:18px 15px;display:flex;align-items:center;justify-content:center;gap:15px;border-bottom:1px solid #222;flex-wrap:wrap}
+.header h1{margin:0;font-size:32px;font-weight:900}
+.badge-live{background:#5a0a0a;color:#00ff00;padding:6px 16px;border-radius:20px;font-size:14px;font-weight:bold;display:flex;align-items:center;gap:6px;border:1px solid #7a1a1a}
+.badge-live i{width:10px;height:10px;background:#00ff00;border-radius:50%;display:inline-block;animation:blink 1s infinite}
+@keyframes blink{0%{opacity:1}50%{opacity:0.2}100%{opacity:1}}
+.container{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;padding:15px}
+.card{background:#1a1a1a;padding:8px;border-radius:12px;text-align:center;position:relative}
+.card .badge{position:absolute;top:12px;left:12px;background:rgba(0,0,0,0.7);color:#0f0;padding:3px 8px;border-radius:20px;font-size:11px;display:flex;align-items:center;gap:4px}
+.card .badge i{width:6px;height:6px;background:#0f0;border-radius:50%;display:inline-block;animation:blink 1s infinite}
+img{width:600px;max-width:90vw;border-radius:8px;display:block}
+h3{margin:8px;font-size:14px}
+</style></head><body>
+<div class="header"><span style="font-size:28px">📹</span><h1>DAER AO VIVO</h1><span class="badge-live"><i></i>AO VIVO</span></div>
+<div class="container">
+<div class="card"><div class="badge"><i></i>AO VIVO</div><h3>Passo Fundo - NOVO!</h3><img id="pf" src="camera.php?cam=ptz_passo_fundo"></div>
+<div class="card"><div class="badge"><i></i>AO VIVO</div><h3>Santa Maria</h3><img id="sm" src="camera.php?cam=ptz_santa_maria"></div>
+<div class="card"><div class="badge"><i></i>AO VIVO</div><h3>Ijui</h3><img id="ijui" src="camera.php?cam=ptz_ijui"></div>
+<div class="card"><div class="badge"><i></i>AO VIVO</div><h3>Caxias do Sul</h3><img id="cxs" src="camera.php?cam=ptz_caxias_do_sul"></div>
+<div class="card"><div class="badge"><i></i>AO VIVO</div><h3>Montenegro</h3><img id="mt" src="camera.php?cam=ptz_montenegro"></div>
+</div>
+<script>
+setInterval(()=>{
+document.getElementById('pf').src='camera.php?cam=ptz_passo_fundo&t='+Date.now();
+document.getElementById('sm').src='camera.php?cam=ptz_santa_maria&t='+Date.now();
+document.getElementById('ijui').src='camera.php?cam=ptz_ijui&t='+Date.now();
+document.getElementById('cxs').src='camera.php?cam=ptz_caxias_do_sul&t='+Date.now();
+document.getElementById('mt').src='camera.php?cam=ptz_montenegro&t='+Date.now();
+},5000);
+</script></body></html>
